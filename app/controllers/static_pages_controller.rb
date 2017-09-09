@@ -2,21 +2,19 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def courses
+  def events
   end
 
-  def mentors
+  def gallery
   end
 
-  def faq
+  def about_us
   end
 
-  def hiring_students
+  def curriculum
   end
 
-  def corporate_workshop
+  def apply
   end
 
-  def become_instructor
-  end
 end

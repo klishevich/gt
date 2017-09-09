@@ -1,3 +1,5 @@
+<% navItemDropdownClassActive = current_controller_action?(['devise/sessions.new', 'devise/registrations.new']) ? "active" : "" %>
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="/"><%=t :nav_brand %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,36 +8,26 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li id="courses" class="nav-item">
-        <a class="nav-link" href="/courses"><%=t :nav_courses %></a>
-      </li>
-      <li id="mentors" class="nav-item">
-        <a class="nav-link" href="/mentors"><%=t :nav_mentors %></a>
-      </li>
-      <li id="faq" class="nav-item">
-        <a class="nav-link" href="/faq"><%=t :nav_faq %></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_business %></a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="/hiring_students"><%=t :nav_hiring_students %></a>
-          <a class="dropdown-item" href="/corporate_workshop"><%=t :nav_corporate_workshop %></a>
-          <a class="dropdown-item" href="/become_instructor"><%=t :nav_become_instructor %></a>
-        </div>
+      <%= page_nav_item t(:nav_home), '/' %>
+      <%= page_nav_item t(:nav_curriculum), curriculum_path %>
+      <%= page_nav_item t(:nav_events), events_path %>
+      <%= page_nav_item t(:nav_gallery), gallery_path %>
+      <%= page_nav_item t(:nav_about_us), about_us_path %>
+      <li>
+        <%= link_to 'Apply Now', apply_path, class: "btn btn-success", role: "button" %>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder=<%=t :nav_search %> aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%=t :nav_search %></button>
-    </form>
     <ul class="navbar-nav justify-content-end">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_lang %></a>
-        <div class="dropdown-menu" aria-labelledby="dropdown02">
-          <%= link_to 'EN', Rails.application.config.en_website_url, class: 'dropdown-item' %>
-          <%= link_to 'RU', Rails.application.config.ru_website_url, class: 'dropdown-item' %>
+      <li class="nav-item dropdown <%=navItemDropdownClassActive%>">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_accout %></a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <%= page_dropdown_item t(:nav_log_in), new_user_session_path %>
+          <%= page_dropdown_item t(:nav_sign_up), new_user_registration_path %>
         </div>
       </li>
+      <div class="dropdown-divider"></div>
+      <%= change_locale_nav_item :ru, Rails.application.config.ru_website_url %>
+      <%= change_locale_nav_item :en, Rails.application.config.en_website_url %>
     </ul>
   </div>
 </nav>

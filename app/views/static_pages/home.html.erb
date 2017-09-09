@@ -1,4 +1,63 @@
 <div class="starter-template">
-  <h1><%=t :home_page_header %></h1>
-  <p class="lead"><%=t :home_page_text1 %><br> <%=t :home_page_text2 %> <a href="mailto:info@busation.com">info@busation.com</a>.</p>
+  <h1>GT EDUCATION CENTER</h1>
+  <%= render 'deadline' %>
+  <div class="home-block-info__button-link">
+    <%= link_to 'Apply Now', apply_path, class: "btn btn-success btn-lg", role: "button" %>
+  </div>
+</div>
+<div class="home-block-info">
+  <h2>About Us</h2>
+  <div>
+    We believe that everyone has unlimited potential. Our mission is to connect creative ideas and professionalism with experienced mentors. Through meaningful experiences with inspiring people, the GT education center will provide a steady supply of new opportunities and knowledge.
+  </div>
+</div>
+<div class="home-block-info">
+  <h2>Our Vision</h2>
+  <div>
+    Our vision is to build the world's friendliest academic community and unite all those who are passionate about creating a better professional and personal life.
+  </div>
+</div>
+<div class="home-block-info">
+  <h2>How the GT EDUCATION CENTER works</h2>
+  <div>
+    We will create to unite thoughtful individuals through a life of new inspiration and connections. Our curriculum focuses on medicine at the beginning, but it will also focus on Arts, Entrepreneurship, Policies, and Social Impact. Each week, GT participants are invited to a wide variety of GT education programs that include lectures and discussions with distinguished speakers.
+  </div>
+  <div>
+    All potential participants are interviewed one by one before joining, and commit to support each other's efforts to the best of their abilities.
+  </div>
+</div>
+<div class="home-block-info">
+  <h2>Leadership and Speakers</h2>
+  <h3>Leadership</h3>
+  <ul>
+    <li>DR. SANGHYUN LIM</li>
+    <li>MR. MICHAEL KLISHEVICH</li>
+    <li>MR. WOOJIN HWANG</li>
+    <li>DR. IRINA KIM</li>
+    <li>DR. WENWU KO</li>
+  </ul>
+  <h3>Speakers</h3>
+  <ul>
+    <li>DR. MIRRET</li>
+    <li>DR. VIVIAN</li>
+  </ul>
+</div>
+<div class="home-block-info">
+  <h2>Curriculum</h2>
+  <div>
+    We involve aspiring and established participants with ideas and can help them navigate their own professional and private world. GT participants are continually promoting research and innovation to foster deeper understanding and mobilize meaningful action.
+    <div class="home-block-info__button-link">
+      <%= link_to 'Read Full Curriculum', curriculum_path, class: "btn btn-primary btn-lg", role: "button" %>
+    </div>
+  </div>
+</div>
+<div class="home-block-info">
+  <h2>Apply</h2>
+  <div>
+    Welcome to the application for the GT education program. Just send us following information if you want to apply for the program.
+  </div>
+  <%= render 'deadline' %>
+  <div class="home-block-info__button-link">
+    <%= link_to 'Apply Now', apply_path, class: "btn btn-success btn-lg", role: "button" %>
+  </div>
 </div>
