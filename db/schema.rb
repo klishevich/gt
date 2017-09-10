@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823051132) do
+ActiveRecord::Schema.define(version: 20170910145303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applics", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "first_name"
+    t.string "second_name"
+    t.string "last_name"
+    t.string "full_name_passport"
+    t.string "preferred_name"
+    t.string "country_citizen"
+    t.string "address_street"
+    t.string "city"
+    t.string "country"
+    t.string "postal_code"
+    t.string "phone"
+    t.string "native_lang"
+    t.string "prof_highest_grade"
+    t.string "prof_university"
+    t.integer "prof_grad_year"
+    t.string "prof_actual_position"
+    t.string "prof_current_institution"
+    t.string "prof_specialty"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_applics_on_user_id"
+  end
 
   create_table "test_models", force: :cascade do |t|
     t.string "name"
@@ -42,4 +67,5 @@ ActiveRecord::Schema.define(version: 20170823051132) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "applics", "users"
 end

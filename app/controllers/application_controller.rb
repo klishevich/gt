@@ -12,8 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   def current_controller_action?(names)
-    Rails.logger.info('params')
-    Rails.logger.info(params)
     return false if (params[:action].blank? || params[:controller].blank?)
     controller_action = "#{params[:controller]}.#{params[:action]}"
     Rails.logger.info(controller_action)

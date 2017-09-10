@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/about_us', to: 'static_pages#about_us'
   get '/curriculum', to: 'static_pages#curriculum'
   get '/apply', to: 'static_pages#apply'
+
+  resources :applics, only: [:index, :new, :create, :edit, :update]
 end

@@ -21,8 +21,9 @@
       <li class="nav-item dropdown <%=navItemDropdownClassActive%>">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_accout %></a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <%= page_dropdown_item t(:nav_log_in), new_user_session_path %>
           <%= page_dropdown_item t(:nav_sign_up), new_user_registration_path %>
+          <%= page_dropdown_item t(:nav_log_in), new_user_session_path %>
+          <%= page_dropdown_item t(:nav_apply), new_applic_path %>
         </div>
       </li>
       <div class="dropdown-divider"></div>

@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  first_name: MyString
+  second_name: MyString
+  last_name: MyString
+  full_name_passport: MyString
+  preferred_name: MyString
+  country_citizen: MyString
+  address_street: MyString
+  city: MyString
+  country: MyString
+  postal_code: MyString
+  phone: MyString
+  native_lang: MyString
+  prof_highest_grade: MyString
+  prof_university: MyString
+  prof_grad_year: 1
+  prof_actual_position: MyString
+  prof_current_institution: MyString
+  prof: 
+
+two:
+  user: two
+  first_name: MyString
+  second_name: MyString
+  last_name: MyString
+  full_name_passport: MyString
+  preferred_name: MyString
+  country_citizen: MyString
+  address_street: MyString
+  city: MyString
+  country: MyString
+  postal_code: MyString
+  phone: MyString
+  native_lang: MyString
+  prof_highest_grade: MyString
+  prof_university: MyString
+  prof_grad_year: 1
+  prof_actual_position: MyString
+  prof_current_institution: MyString
+  prof: 
