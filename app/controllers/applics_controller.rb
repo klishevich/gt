@@ -11,7 +11,7 @@ class ApplicsController < ApplicationController
     @applic = user.build_applic(applic_params)
     if @applic.save
       flash[:notice] = t(:applic_saved_successfuly)
-      redirect_to edit_applic_path @applic
+      redirect_to applic_path @applic
     else
       render 'new'
     end  
@@ -23,12 +23,16 @@ class ApplicsController < ApplicationController
 
   def update
     @applic = Applic.find(params[:id])
-    if @applic.update_attributes(product_params)
+    if @applic.update_attributes(applic_params)
       flash[:notice] = t(:applic_saved_successfuly)
       redirect_to edit_applic_path @applic
     else
       render 'edit'
     end
+  end
+
+  def show
+    @applic=Applic.find(params[:id])
   end
 
   private

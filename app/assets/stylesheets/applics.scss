@@ -1,3 +1,10 @@
 // Place all the styles related to the applics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.has-error .form-control {
+  border-color: #d9534f;
+}
+
+.has-error .help-block {
+  color: #d9534f;
+}

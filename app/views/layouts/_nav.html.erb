@@ -14,21 +14,24 @@
       <%= page_nav_item t(:nav_gallery), gallery_path %>
       <%= page_nav_item t(:nav_about_us), about_us_path %>
       <li>
-        <%= link_to 'Apply Now', apply_path, class: "btn btn-success", role: "button" %>
+        <%= apply_now_button %>
       </li>
     </ul>
     <ul class="navbar-nav justify-content-end">
       <li class="nav-item dropdown <%=navItemDropdownClassActive%>">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_accout %></a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <%= page_dropdown_item t(:nav_sign_up), new_user_registration_path %>
-          <%= page_dropdown_item t(:nav_log_in), new_user_session_path %>
-          <%= page_dropdown_item t(:nav_apply), new_applic_path %>
+          <% if user_signed_in? %>
+            <%= link_to 'Log out', destroy_user_session_path, method: 'delete', class: 'dropdown-item' %>
+          <% else %>
+            <%= page_dropdown_item t(:nav_log_in), new_user_session_path %>
+            <%= page_dropdown_item t(:nav_sign_up), new_user_registration_path %>
+          <% end %>
         </div>
       </li>
-      <div class="dropdown-divider"></div>
-      <%= change_locale_nav_item :ru, Rails.application.config.ru_website_url %>
-      <%= change_locale_nav_item :en, Rails.application.config.en_website_url %>
+      <!-- <div class="dropdown-divider"></div> -->
+      <%#= change_locale_nav_item :ru, Rails.application.config.ru_website_url %>
+      <%#= change_locale_nav_item :en, Rails.application.config.en_website_url %>
     </ul>
   </div>
 </nav>

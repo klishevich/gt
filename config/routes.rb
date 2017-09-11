@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/curriculum', to: 'static_pages#curriculum'
   get '/apply', to: 'static_pages#apply'
 
-  resources :applics, only: [:index, :new, :create, :edit, :update]
+  resources :applics, only: [:index, :new, :create, :edit, :update, :show]
 end

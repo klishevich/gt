@@ -1,0 +1,21 @@
+<h1>Your Application</h1>
+<%= simple_form_for @applic do |f| %>
+  <%= f.input :first_name, readonly: true %>
+  <%= f.input :second_name, readonly: true %>
+  <%= f.input :last_name, readonly: true %>
+  <%= f.input :full_name_passport, readonly: true %>
+  <%= f.input :preferred_name, readonly: true %>
+  <%= f.input :country_citizen, readonly: true %>
+  <%= f.input :address_street, readonly: true %>
+  <%= f.input :city, readonly: true %>
+  <%= f.input :country, readonly: true %>
+  <%= f.input :postal_code, readonly: true %>
+  <%= f.input :phone, readonly: true %>
+  <%= f.input :native_lang, readonly: true %>
+  <%= f.input :prof_highest_grade, readonly: true %>
+  <%= f.input :prof_university, readonly: true %>
+  <%= f.input :prof_grad_year, readonly: true %>
+  <%= f.input :prof_actual_position, readonly: true %>
+  <%= f.input :prof_current_institution, readonly: true %>
+  <%= f.input :prof_specialty, readonly: true %>
+<% end %>

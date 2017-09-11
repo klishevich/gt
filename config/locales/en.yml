@@ -30,6 +30,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    models:
+      applic: Application
+    attributes:
+      applic:
+        first_name: "First Name"
+        second_name: "Middle Name"
+        last_name: "Last Name"
+        full_name_passport: "Full Name as in Passport"
+        preferred_name: "Preferred Name"
+        country_citizen: "Your Sitizenship"
+        address_street: "Street and House"
+        city: "City"
+        country: "Country"
+        postal_code: "Postal Code"
+        phone: "Your Phone Number"
+        native_lang: "Your Native Language"
+        prof_highest_grade: "Your Highest Grade"
+        prof_university: "University"
+        prof_grad_year: "Year of Graduation"
+        prof_actual_position: "Your Position"
+        prof_current_institution: "Current Institution"
+        prof_specialty: "Your Speciality"
   default_title: 'GT Tech Leadership'
   nav_brand: 'GT Tech Leadership'
   nav_home: 'Home'
@@ -40,4 +63,5 @@ en:
   nav_accout: 'Account'
   nav_log_in: 'Log In'
   nav_sign_up: 'Sign Up'
-  nav_apply: 'New Applic'
+  nav_apply: 'Apply'
+  applic_saved_successfuly: 'Application saved successfuly'
