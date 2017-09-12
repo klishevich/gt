@@ -5,8 +5,28 @@ body {
   padding-top: 5rem;
 }
 
+.bg-dark {
+  background-color: #007bb3 !important;
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-dark .navbar-nav a.nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  &:hover {
+    color: white;
+  }
+}
+
+.logo-home {
+  margin-bottom: 1rem;
+}
+
 .starter-template {
-  padding-top: 2rem;
+  padding-top: 1rem;
   text-align: center;
 }
 
@@ -20,7 +40,6 @@ body {
 }
 
 .basic-page {
-  padding-top: 1rem;
 }
 
 .basic-page__block {
