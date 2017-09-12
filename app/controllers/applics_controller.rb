@@ -17,9 +17,9 @@ class ApplicsController < ApplicationController
     end  
   end
 
-  def edit
-    @applic=Applic.find(params[:id])
-  end
+  # def edit
+  #   @applic=Applic.find(params[:id])
+  # end
 
   def update
     @applic = Applic.find(params[:id])
@@ -32,7 +32,12 @@ class ApplicsController < ApplicationController
   end
 
   def show
-    @applic=Applic.find(params[:id])
+    if current_user&.applic
+      @applic= current_user.applic
+    else
+      flash[:notice] = t(:not_authorized)
+      redirect_to root_path
+    end
   end
 
   private
