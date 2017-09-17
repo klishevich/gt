@@ -1,3 +1,46 @@
 <div class="basic-page">
   <h1><%=t :nav_gallery %></h1>
+  <div class="gallery-item">
+    <div class="gallery-item__title">
+      Videos from First Orientation
+    </div>
+    <div class="gallery-item__date">
+      September 16, 2017
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="embed-responsive embed-responsive-16by9 gallery-item__video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Zv16jAew1EE" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="embed-responsive embed-responsive-16by9 gallery-item__video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/1iNdGDELb90" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="embed-responsive embed-responsive-16by9 gallery-item__video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2Trn-FZGxY8" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item__title">
+      Fotos from First Orientation
+    </div>
+    <div class="gallery-item__date">
+      September 16, 2017
+    </div>
+    <div class="row">
+      <%= gallery_image "1orient/IMG_20170916_150524.jpg" %>
+      <%= gallery_image "1orient/IMG_20170916_160243.jpg" %>
+      <%= gallery_image "1orient/IMG_20170916_160715.jpg" %>
+    </div>
+    <div class="row">
+      <%= gallery_image "1orient/IMG_20170916_160747.jpg" %>
+      <%= gallery_image "1orient/IMG_20170916_162012.jpg" %>
+      <%= gallery_image "1orient/IMG_20170916_165731.jpg" %>
+    </div>
+  </div>
 </div>
