@@ -41,6 +41,6 @@ module ApplicationHelper
 
   def gallery_image(file_name)
     file_path = "/view_image?image=#{file_name}"
-    content_tag(:div, link_to(image_tag(file_name, class: "img-thumbnail"), file_path), class: "col-lg-4")
+    content_tag(:div, link_to(image_tag(file_name, class: "img-thumbnail"), file_path), class: "card")
   end
 end
