@@ -22,27 +22,6 @@ body {
   }
 }
 
-.logo-home {
-  margin-bottom: 1rem;
-}
-
-.starter-template {
-  padding-top: 0.5rem;
-  text-align: center;
-  h1 {
-    margin-top: 0.5rem;
-  }
-}
-
-.home-block-info {
-  margin-top: 2rem;
-}
-
-.home-block-info__button-link {
-  text-align: center;
-  margin: 1rem;
-}
-
 .basic-page {
 }
 
@@ -54,12 +33,11 @@ body {
   margin-top: 1rem;
 }
 
-.deadline {
-  font-size: 1rem;
+.basic-page__apply-button {
+  text-align: center;
+  margin: 1rem;
 }
 
-.module-block {
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-  font-size: 1.4rem;
+.deadline {
+  font-size: 1rem;
 }
